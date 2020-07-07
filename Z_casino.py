@@ -21,7 +21,7 @@ while argent > 0:
 
     mise = input("Combien souhaitez vous miser ?")
     mise = int(mise)
-    numero_gagnant = randrange(1)
+    numero_gagnant = randrange(50)
     print("La boule est tombé sur le numero :", numero_gagnant)
 
     if numero_gagnant == rand:
@@ -32,6 +32,8 @@ while argent > 0:
         print("Vous etes tombé sur le mauvais numero...")
         print("Vous avez perdu", mise)
         argent -= mise
+
+    print("Il vous reste", argent)
 
 
 os.system("pause")

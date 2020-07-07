@@ -18,9 +18,20 @@ while argent > 0:
             print("Ce nombre est négatif")
         if rand > 49:
             print("Ce nombre est superieur a 49")
+    mise = 0
+    while mise <= 0 or mise > argent:
+        mise = input("Combien souhaitez vous miser ?")
+        try:
+            mise = int(mise)
+        except ValueError:
+            print("Vous n'avez pas saisi de mise")
+            mise =- 1
+            continue
+        if mise <= 0:
+            print("La mise saisie est négatif ou nulle")
+        if mise > argent:
+            print("Vous ne pouvez pas miser autant, vous n'avez que", argent)
 
-    mise = input("Combien souhaitez vous miser ?")
-    mise = int(mise)
     numero_gagnant = randrange(50)
     print("La boule est tombé sur le numero :", numero_gagnant)
 
